@@ -11,6 +11,7 @@ import NotFound from './Pages/NotFound'
 import User from './Pages/User'
 import LayoutTwo from './Layouts/LayoutTwo'
 import Description from './Pages/Description'
+import Confirm from './Pages/Confirm'
 
 function App() {
 const route = createBrowserRouter(
@@ -24,6 +25,7 @@ const route = createBrowserRouter(
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/user' element={<User/>}/>
       <Route path='/description' element={<Description/>}/>
+      <Route path='/confirm' element={<Confirm/>}/>
       <Route path='*'  element={<NotFound/>}/>
     </Route>
     <Route path='/layoutTwo' element={<LayoutTwo/>}>

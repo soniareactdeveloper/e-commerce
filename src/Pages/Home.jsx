@@ -1,11 +1,11 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+
 
 
 const Home = () => {
   const[product, setProduct]=useState([])
-  const navigate= useNavigate()
+
 
 
   useEffect(() =>{
@@ -13,9 +13,6 @@ const Home = () => {
     .then((res)=>setProduct(res.data.record))
   }, [])
 
-  const handleShow = ()=>{
-    navigate('/description')
-  }
 
 
   return (
@@ -42,9 +39,6 @@ const Home = () => {
               <li>Name: {item.name}</li>
             </ul>
             <div className="text-lg text-[#FF9130] mt-4 font-bold">Price: {item.price}</div>
-            <button onClick={()=>handleShow(item)} className="text-xl text-white font-bold bg-[#939185] w-full p-2 rounded-md mt-3 hover:bg-green-600 active:bg-yellow-300">
-              Show More
-            </button>
           </div>
         </div>
       ))}
